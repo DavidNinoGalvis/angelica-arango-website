@@ -1,103 +1,110 @@
+// app/page.tsx
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <main className="min-h-screen px-6 py-10 md:px-20 md:py-16 bg-white text-gray-900">
+      {/* HERO */}
+      <section className="flex flex-col items-center text-center gap-6 max-w-3xl mx-auto">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/angelica.jpg" // <-- pon aquí una foto en /public
+          alt="Angélica Arango"
+          width={160}
+          height={160}
+          className="rounded-full border border-gray-200 shadow-md"
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        <h1 className="text-3xl md:text-5xl font-bold">Angélica Arango</h1>
+        <h2 className="text-xl text-gray-600">
+          Psicóloga especializada en acompañamiento emocional y desarrollo
+          personal
+        </h2>
+        <p className="text-base text-gray-700 leading-relaxed">
+          Te acompaño en tu proceso emocional a través de sesiones
+          personalizadas y herramientas prácticas. Conoce mis guías digitales,
+          recomendaciones y cómo agendar tu primera cita.
+        </p>
+        <a
+          href="#contacto"
+          className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition"
+        >
+          Agenda tu cita
+        </a>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      {/* SECCIÓN: SOBRE MÍ */}
+      <section className="mt-24 max-w-4xl mx-auto">
+        <h3 className="text-2xl font-semibold mb-4">Sobre mí</h3>
+        <p className="text-gray-700 leading-relaxed">
+          Soy psicóloga con más de 8 años de experiencia en el acompañamiento de
+          adultos, jóvenes y parejas. Mi enfoque combina la escucha activa con
+          estrategias prácticas para promover el bienestar emocional y la
+          autorregulación.
+        </p>
+      </section>
+
+      {/* SECCIÓN: GUÍAS */}
+      <section className="mt-24 max-w-4xl mx-auto">
+        <h3 className="text-2xl font-semibold mb-4">Guías digitales</h3>
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <li className="p-4 border rounded-lg shadow-sm hover:shadow-md transition">
+            <h4 className="text-lg font-semibold">Guía para la ansiedad</h4>
+            <p className="text-gray-600 text-sm">
+              Ejercicios prácticos para reducir la ansiedad en tu día a día.
+            </p>
+          </li>
+          <li className="p-4 border rounded-lg shadow-sm hover:shadow-md transition">
+            <h4 className="text-lg font-semibold">Técnicas de autocuidado</h4>
+            <p className="text-gray-600 text-sm">
+              Estrategias simples para cuidar tu salud mental desde casa.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      {/* SECCIÓN: TESTIMONIOS */}
+      <section className="mt-24 max-w-4xl mx-auto">
+        <h3 className="text-2xl font-semibold mb-4">Testimonios</h3>
+        <blockquote className="border-l-4 pl-4 italic text-gray-700">
+          “Angélica me ayudó a recuperar la confianza en mí misma. Sus sesiones
+          me cambiaron la vida.” — Laura G.
+        </blockquote>
+      </section>
+
+      {/* SECCIÓN: CONTACTO */}
+      <section
+        id="contacto"
+        className="mt-24 max-w-4xl mx-auto bg-gray-100 p-6 rounded-xl"
+      >
+        <h3 className="text-2xl font-semibold mb-4">Contacto</h3>
+        <form className="flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Tu nombre"
+            className="border px-4 py-2 rounded"
+          />
+          <input
+            type="email"
+            placeholder="Tu correo electrónico"
+            className="border px-4 py-2 rounded"
+          />
+          <textarea
+            placeholder="Mensaje"
+            rows={4}
+            className="border px-4 py-2 rounded"
+          />
+          <button
+            type="submit"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+            Enviar mensaje
+          </button>
+        </form>
+      </section>
+
+      <footer className="mt-24 text-center text-sm text-gray-500">
+        &copy; {new Date().getFullYear()} Angélica Arango. Todos los derechos
+        reservados.
       </footer>
-    </div>
+    </main>
   );
 }
