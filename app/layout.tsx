@@ -1,7 +1,7 @@
 // app/layout.tsx
 import "./globals.css";
 import { ReactNode } from "react";
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Angélica Arango | Psicóloga",
@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
       <body className="bg-gray-50 text-gray-900">
-        <Header />
+        <Navbar />
         {children}
       </body>
     </html>
