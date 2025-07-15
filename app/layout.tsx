@@ -1,7 +1,20 @@
-// app/layout.tsx
 import "./globals.css";
 import { ReactNode } from "react";
+import { Noto_Serif, Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import ApolloWrapper from "@/components/ApolloWrapper";
+
+const notoSerif = Noto_Serif({
+  subsets: ["latin"],
+  variable: "--font-noto",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Angélica Arango | Psicóloga",
@@ -11,9 +24,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
-      <body className="bg-gray-50 text-gray-900">
-        <Navbar />
-        {children}
+      <body
+        className={`${notoSerif.variable} ${montserrat.variable} bg-gray-50 text-gray-900`}
+      >
+        <ApolloWrapper>
+          <Navbar />
+          {children}
+        </ApolloWrapper>
       </body>
     </html>
   );

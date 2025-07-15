@@ -1,18 +1,20 @@
 // app/page.tsx
-import HeroAngie from "@/components/HeroAngie";
+import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 import Guias from "@/components/Guias";
-//import Testimonios from "@/components/sections/home/Testimonios";
+import Testimonios from "@/components/Testimonios";
+import Faq from "@/components/Faq";
+
 //import Contacto from "@/components/sections/home/Contacto";
 
 export default function Home() {
   return (
     <main>
-      <HeroAngie />
+      <Hero />
       <AboutMe />
+      <Testimonios />
+      <Faq />
       <Guias />
-      {/*<Testimonios />
-      <Contacto />*/}
     </main>
   );
 }
