@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { Noto_Serif, Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import ApolloWrapper from "@/components/ApolloWrapper";
+import BackgroundDecorations from "@/components/BackgroundDecorations";
 
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${notoSerif.variable} ${montserrat.variable} bg-gray-50 text-gray-900`}
       >
+        <BackgroundDecorations />
         <ApolloWrapper>
           <Navbar />
           {children}
