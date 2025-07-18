@@ -4,6 +4,7 @@ import { Noto_Serif, Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import ApolloWrapper from "@/components/ApolloWrapper";
 import BackgroundDecorations from "@/components/BackgroundDecorations";
+import Footer from "@/components/Footer";
 
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ApolloWrapper>
           <Navbar />
           {children}
+          <Footer />
         </ApolloWrapper>
       </body>
     </html>

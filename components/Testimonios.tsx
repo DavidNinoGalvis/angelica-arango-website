@@ -45,7 +45,7 @@ export default function TestimoniosCarrusel() {
           <div className="w-16 h-1 bg-[#222] mx-auto mt-4 rounded-full"></div>
         </motion.h2>
 
-        <div className="relative">
+        <div className="relative ">
           {/* Flechas personalizadas */}
           <div className="swiper-button-prev-custom absolute left-[-3rem] top-1/2 z-10 -translate-y-1/2 cursor-pointer">
             <ChevronLeft
@@ -81,7 +81,7 @@ export default function TestimoniosCarrusel() {
                 768: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
               }}
-              className="!overflow-visible"
+              className="overflow-hidden"
             >
               {testimonios.map((t: any, i: number) => (
                 <SwiperSlide key={i}>
