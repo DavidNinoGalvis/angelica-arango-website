@@ -40,7 +40,7 @@ export default function AboutMe() {
           viewport={{ once: false }}
         >
           <Image
-            src="/about-me.webp"
+            src="/logo-aboutme.webp"
             alt="Angélica Arango"
             width={450}
             height={450}

@@ -4,7 +4,6 @@ import AboutMe from "@/components/AboutMe";
 import Guias from "@/components/Guias";
 import Testimonios from "@/components/Testimonios";
 import Faq from "@/components/Faq";
-import Teamwork from "@/components/Teamwork";
 
 //import Contacto from "@/components/sections/home/Contacto";
 
@@ -16,7 +15,6 @@ export default function Home() {
       <Testimonios />
       <Faq />
       <Guias />
-      <Teamwork />
     </main>
   );
 }

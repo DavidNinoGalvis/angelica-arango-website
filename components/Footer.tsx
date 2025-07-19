@@ -74,8 +74,11 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-gray-600">
             <li className="flex items-center justify-center md:justify-start gap-2">
               <Mail size={16} />
-              <a href="mailto:angelica@example.com" className="hover:text-black">
-                CORREO AQUI
+              <a
+                href="mailto:angelica@example.com"
+                className="hover:text-black"
+              >
+                hola@angelicaarango.com
               </a>
             </li>
             <li className="flex items-center justify-center md:justify-start gap-2">
@@ -105,7 +108,10 @@ export default function Footer() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        <p>© {new Date().getFullYear()} Angélica Arango. Todos los derechos reservados.</p>
+        <p>
+          © {new Date().getFullYear()} Angélica Arango. Todos los derechos
+          reservados.
+        </p>
         <p className="text-gray-400 mt-2 md:mt-0 flex items-center gap-1">
           Hecho con <Heart size={14} className="text-pink-400" /> por{" "}
           <a
