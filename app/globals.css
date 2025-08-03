@@ -150,6 +150,7 @@ html {
     @apply border-border outline-ring/50;
   }
   body {
+    overflow-x: hidden;
     @apply bg-background text-foreground;
   }
 }

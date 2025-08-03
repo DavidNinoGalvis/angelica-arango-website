@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
       <body
-        className={`${notoSerif.variable} ${montserrat.variable} bg-gray-50 text-gray-900`}
+        className={`${notoSerif.variable} ${montserrat.variable} bg-gray-50 text-gray-900 overflow-x-hidden`}
       >
         <ApolloWrapper>
           <Navbar />
